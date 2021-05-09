@@ -25,6 +25,7 @@ type WebPayParam struct {
 	NotifyUrl string            // 异步通知地址
 	ResultUrl string            // 同步返回地址
 	Channel   WebPayChannel     // 支付渠道
+	Extend    string            // 扩展域
 }
 
 func (s *Service) WebPay(param *WebPayParam) (string, error) {
@@ -72,6 +73,7 @@ func (s *Service) WebPay(param *WebPayParam) (string, error) {
 			"payModeList": payModeList,
 			"notifyUrl":   param.NotifyUrl,
 			"frontUrl":    param.ResultUrl,
+			"extend":      param.Extend,
 		},
 	}
 
