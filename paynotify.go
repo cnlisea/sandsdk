@@ -26,14 +26,34 @@ type PayNotifyDataHead struct {
 }
 
 type PayNotifyDataBody struct {
-	TotalAmount    string `json:"totalAmount"`
-	ClearDate      string `json:"clearDate"`
-	Credential     string `json:"credential"`
-	TradeNo        string `json:"tradeNo"`
-	PayTime        string `json:"payTime"`
-	BuyerPayAmount string `json:"buyerPayAmount"`
-	OrderCode      string `json:"orderCode"`
-	DiscAmount     string `json:"discAmount"`
+	Mid                 string `json:"mid"`
+	OrderCode           string `json:"orderCode"`
+	TotalAmount         string `json:"totalAmount"`
+	OrderStatus         string `json:"orderStatus"`
+	TradeNo             string `json:"tradeNo"`
+	SettleAmount        string `json:"settleAmount"`
+	BuyerPayAmount      string `json:"buyerPayAmount"`
+	DiscAmount          string `json:"discAmount"`
+	PayTime             string `json:"payTime"`
+	ClearDate           string `json:"clearDate"`
+	AccNo               string `json:"accNo"`
+	MidFee              string `json:"midFee"`
+	ExtraFee            string `json:"extraFee"`
+	SpecialFee          string `json:"specialFee"`
+	PlMidFee            string `json:"plMidFee"`
+	BankSerial          string `json:"bankserial"`
+	TxnCompleteTime     string `json:"txnCompleteTime"`
+	PayOrderCode        string `json:"payordercode"`
+	ExternalProductCode string `json:"externalProductCode"`
+	CardNo              string `json:"cardNo"`
+	CreditFlag          string `json:"creditFlag"`
+	Bid                 string `json:"bid"`
+	Extend              string `json:"extend"`
+	FundBillList        string `json:"fundBillList"`
+	PayDetail           string `json:"payDetail"`
+	BenefitAmount       string `json:"benefitAmount"`
+	RemittanceCode      string `json:"remittanceCode"`
+	AccLogonNo          string `json:"accLogonNo"`
 }
 
 func (s *Service) PayParseNotify(data string) (*PayNotify, error) {
